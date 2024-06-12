@@ -23,21 +23,21 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    setTheme('system');
-  }, []);
-
   return (
     <>
       {/* Medium and larger screens */}
       <div className='hidden md:flex md:flex-row justify-between px-6 py-2 items-center border-b-2 border-gray-300'>
-        <Image
-          src={'/logo.webp'}
-          width={100}
-          height={300}
-          alt='Logo'
-        />
+        <Link
+          href={'/'}
+          className='cursor-pointer'>
+          <Image
+            src={'/logo.webp'}
+            width={100}
+            height={300}
+            alt='Logo'
+            className='rounded-md'
+          />
+        </Link>
         <div className='flex md:flex-row flex-col md:gap-8 gap-3'>
           <Link
             href='/dashboard'
@@ -60,20 +60,6 @@ export default function Header() {
             }`}>
             <Rocket />
             Upgrade
-          </Link>
-          <Link
-            href='/how-it-works'
-            className={`hover:bg-red-100 px-4 py-2 rounded-lg text-lg font-semibold flex items-center gap-2 hover:dark:text-black ${
-              pathname === '/how-it-works' ? 'text-purple-500' : ''
-            }`}>
-            <Zap /> How it Works?
-          </Link>
-          <Link
-            href=''
-            className={`hover:bg-gray-100 px-4 py-2 rounded-lg text-lg font-semibold flex items-center gap-2 hover:dark:text-black ${
-              pathname === '/buy-code' ? 'text-purple-500' : ''
-            }`}>
-            <Github /> Buy Source Code
           </Link>
         </div>
         <div className='flex items-center gap-6 '>
@@ -158,13 +144,6 @@ export default function Header() {
               }`}>
               <Rocket />
               Upgrade
-            </Link>
-            <Link
-              href='/how-it-works'
-              className={`text-sm font-semibold flex items-center gap-2 ${
-                pathname === '/how-it-works' ? 'text-purple-500' : ''
-              }`}>
-              <Zap /> How it Works?
             </Link>
           </div>
         )}
