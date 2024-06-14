@@ -5,6 +5,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/theme-provider';
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,7 +29,11 @@ export default function RootLayout({
             defaultTheme='system'
             enableSystem
             disableTransitionOnChange>
-            {children}
+            <div className='flex flex-col h-screen'>
+              <Header />
+              <div className='flex-grow'>{children}</div>
+              <Footer />
+            </div>
           </ThemeProvider>
         </body>
       </html>

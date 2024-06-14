@@ -94,12 +94,14 @@ export default function Header() {
       {/* Mobile screens */}
       <div className='md:hidden flex flex-col px-6 py-2 items-center border-b-2 border-gray-300'>
         <div className='flex justify-between w-full items-center'>
-          <Image
-            src={'/logo.webp'} // New image for mobile
-            width={80}
-            height={240}
-            alt='Mobile Logo'
-          />
+          <Link href={'/'}>
+            <Image
+              src={'/logo.webp'} // New image for mobile
+              width={80}
+              height={240}
+              alt='Mobile Logo'
+            />
+          </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className='mr-4'>
