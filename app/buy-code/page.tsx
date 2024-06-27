@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function BuyCode() {
   return (
-    <div className='flex items-center justify-center flex-col'>
+    <div className='flex items-center justify-center flex-col h-full'>
       <h1 className='text-3xl font-bold mb-4'>Buy the Source Code</h1>
       <p className='text-center mb-8 md:px-0 px-4'>
         Like the project? Buy the source code and customize it to fit your
@@ -19,7 +19,7 @@ export default function BuyCode() {
             className='mb-4 dark:text-black'
           />
           <Link
-            href={'https://stripe.com'}
+            href={'https://buymeacoffee.com/moayaan.eth/e/271140'}
             target='_blank'
             className='bg-blue-400 text-white px-4 py-2 rounded-md hover:bg-purple-400'>
             Buy with Card

@@ -29,7 +29,7 @@ export default function RootLayout({
             defaultTheme='system'
             enableSystem
             disableTransitionOnChange>
-            <div className='flex flex-col h-screen'>
+            <div className='flex flex-col h-screen w-screen overflow-x-hidden'>
               <Header />
               <div className='flex-grow'>{children}</div>
               <Footer />

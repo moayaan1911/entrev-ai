@@ -2,7 +2,12 @@
 
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-const isProtectedRoute = createRouteMatcher(['/dashboard(.*)', '/forum(.*)']);
+const isProtectedRoute = createRouteMatcher([
+  '/dashboard(.*)',
+  '/forum(.*)',
+  '/questions(.*)',
+  '/upgrade(.*)',
+]);
 
 export default clerkMiddleware((auth: any, req: any) => {
   if (isProtectedRoute(req)) auth().protect();

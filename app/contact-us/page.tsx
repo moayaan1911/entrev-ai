@@ -69,7 +69,7 @@ export default function ContactUs() {
   });
   return (
     <div className='container mx-auto p-4'>
-      <div className='flex flex-col md:flex-row'>
+      <div className='flex flex-col md:flex-row items-center justify-center h-full'>
         <div className='md:w-1/2'>
           <Image
             src='/contact.jpeg'

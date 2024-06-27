@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Page() {
   return (
-    <section className='bg-white'>
+    <section className='bg-white dark:bg-black'>
       <div className='lg:grid lg:min-h-screen lg:grid-cols-12'>
         <section className='relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6'>
           <Image
@@ -32,11 +32,6 @@ export default function Page() {
           </div>
         </section>
         <section className='flex items-center flex-col justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6'>
-          <Link
-            href='/'
-            className='mb-4 inline-block rounded-lg bg-blue-400 px-6 py-3 text-lg font-semibold text-white hover:bg-purple-400'>
-            Go to Home Page
-          </Link>
           <SignUp />
         </section>
       </div>
